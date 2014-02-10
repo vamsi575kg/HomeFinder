@@ -16,7 +16,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     MapViewController *viewController = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:[NSBundle mainBundle]];
-    
     self.window.rootViewController = viewController;
         
     self.window.backgroundColor = [UIColor whiteColor];

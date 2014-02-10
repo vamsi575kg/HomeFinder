@@ -5,12 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DIrectionsViewController">
             <connections>
-                <outlet property="clear" destination="HMw-t2-zHi" id="fmg-Xe-zvq"/>
-                <outlet property="draw" destination="VRk-B3-Bse" id="yRs-aM-m06"/>
-                <outlet property="mapView" destination="vqr-3I-WOP" id="bYC-xT-zDb"/>
                 <outlet property="view" destination="1" id="3"/>
+                <outlet property="webView" destination="RVl-xF-Fa0" id="udQ-XB-QjD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,31 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="vqr-3I-WOP">
+                <webView contentMode="scaleToFill" id="RVl-xF-Fa0">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="EWy-PD-FGU"/>
-                    </connections>
-                </mapView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="08J-Gs-2ts">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="BIm-tg-fnY">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem title="Draw" id="VRk-B3-Bse">
+                        <barButtonItem title="Dismiss" id="9cN-ce-7K8">
                             <connections>
-                                <action selector="drawClicked:" destination="-1" id="hrx-xV-TBd"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Clear" id="HMw-t2-zHi">
-                            <connections>
-                                <action selector="addAnnotation:" destination="-1" id="JMw-ka-aEC"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="z2P-R7-HAv"/>
-                        <barButtonItem title="Search Type" id="YJQ-sg-FY0">
-                            <connections>
-                                <action selector="showActionsheet:" destination="-1" id="WDY-A9-yQi"/>
+                                <action selector="dismissView:" destination="-1" id="tGs-Wo-UpK"/>
                             </connections>
                         </barButtonItem>
                     </items>

@@ -10,7 +10,13 @@
 #import <MapKit/MapKit.h>
 #import "OverlaySelectionView.h"
 
-@interface MapViewController : UIViewController<OverlaySelectionViewDelegate>
+@interface MapViewController : UIViewController<OverlaySelectionViewDelegate>{
+    
+    NSArray *searchItems;
+    int selectedItem;
+    CLLocationCoordinate2D centerLocation;
+    CLLocationDistance radius;
+}
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
@@ -19,5 +25,5 @@
 
 - (IBAction)drawClicked:(id)sender;
 - (IBAction)addAnnotation:(id)sender;
-
+- (IBAction)showActionsheet:(id)sender;
 @end
